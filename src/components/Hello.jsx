@@ -1,7 +1,9 @@
 import App from "../App"
 
  //Component : Hello
- const Hello = () =>{
-    return(<h1>Sri Angalamman</h1>)
+
+ const Hello = (props) => {
+    console.log(props)
+    return(<h1>Sri Angalamman{props.name}</h1>)
    }
 export default Hello;
