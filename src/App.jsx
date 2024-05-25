@@ -1,5 +1,19 @@
+import Hello from "./components/Hello";
+ 
+ 
+ 
  //Component:App
  const App = () => {
-  return <h1>Sri Angalamman</h1>
+  return (
+    <div>
+      <Hello/>
+      <Hello/>
+      <Hello/>
+      <Hello/>
+      <Hello/>
+      <Hello/>
+    </div>
+  )
+  
  }
  export default App;
