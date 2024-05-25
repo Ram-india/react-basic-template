@@ -1,11 +1,12 @@
 const App = () => {
 
-const isLogIn = true;
-if (isLogIn){
-  return <p>Welcome back!</p>
-}
-else{
-  return<p>Please Login</p>
-}
+const isLogIn = false;
+return(
+  <div>
+    {
+      isLogIn ? <p>Welcome Back!</p> : <p>Please Loggin!</p>
+    }
+  </div>
+)
 }
 export default App
