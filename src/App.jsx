@@ -3,9 +3,8 @@ const App = () => {
 const isLogIn = false;
 return(
   <div>
-    {
-      isLogIn ? <p>Welcome Back!</p> : <p>Please Loggin!</p>
-    }
+    {isLogIn && <p>Welcome Back!</p>}
+    {!isLogIn && <p>Please Login</p>}
   </div>
 )
 }
