@@ -7,15 +7,17 @@ const App = () => {
     {id:4, name:"Raman", age:20},
   ]
 
+  const studentsList = []
+  for (let i = 0; i < students.length; i++){
+    studentsList.push(
+      <li key={students[i].id}>{students[i].name} {students[i].age}</li>
+    )
+  }
   return (
     <div>
       <h1>Students</h1>
       <ul>
-        {
-        students.map((student) =>
-          <li key={student.id}> {student.name} {student.age}</li>
-        )
-        }
+        {studentsList}
       </ul>
     </div>
   )
