@@ -2,7 +2,7 @@
 
 const Todo = (props) => {
   return (
-    <li >{props.todo.title}</li>
+    <li >{props.todo.title} {props.todo.completed ?'✔' : '✘'}</li>
   )
 }
 

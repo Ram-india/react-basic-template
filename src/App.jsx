@@ -2,12 +2,13 @@ import Todo from "./components/Todo";
 
 
 export const App = () => {
+
 const todos = [
-  {id:1, title:'Business Planing', completed:'flase'},
-  {id:2, title:'Salary calculation', completed:'true'},
-  {id:3, title:'Loan Repayment', completed:'true'},
-  {id:4, title:'ROI Planing', completed:'true'},
-  {id:5, title:'Business meet', completed:'flase'}
+  {id:1, title:'Business Planing', completed: false},
+  {id:2, title:'Salary calculation', completed: false},
+  {id:3, title:'Loan Repayment', completed: true},
+  {id:4, title:'ROI Planing', completed:false},
+  {id:5, title:'Business meet', completed: true}
 ]
 
   return (
@@ -16,7 +17,10 @@ const todos = [
       <ul>
         {
           todos.map(todo =>
-            <Todo key = {todo.id} todo = {todo} />
+            <Todo 
+            key = {todo.id}
+            todo = {todo}
+             />
             )
         }
       </ul>
