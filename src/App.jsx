@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
  //Component:App
  const App = () => {
     let[count, setCount] = useState(0);
+    useEffect(() =>{
+        console.log("component is mounted")
+    });
 
 const handleIncrement = () =>{
     setCount(count + 1)
@@ -11,7 +14,7 @@ const handleDecrement = () =>{
     setCount(count - 1)
 }
 const handleReset = () =>{
-    setCount(count = 0)
+    setCount(0  )
 }
 
   return (
