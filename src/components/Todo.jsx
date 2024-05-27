@@ -1,9 +1,15 @@
-
-
 const Todo = (props) => {
   return (
-    <li >{props.todo.title} {props.todo.completed ?'✔' : '✘'}</li>
-  )
-}
+    <div className="container">
+      <div class="card">
+        
+          
+        
+      </div>
+      </div>
+      
+    
+  );
+};
 
-export default Todo
+export default Todo;
