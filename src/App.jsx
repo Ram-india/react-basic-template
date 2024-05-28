@@ -1,10 +1,15 @@
-import React from 'react'
+import { Component } from "react"
+import Hello from "./components/Hello";
 
-export const App = () => {
-  return (
-    <div>
-        <h1>hello</h1>
-    </div>
-  )
+//App component
+class App extends Component {
+    //override render method
+    render(){
+        //return jsk
+        return(
+            <Hello/>
+        )
+
+    }
 }
 export default App;
