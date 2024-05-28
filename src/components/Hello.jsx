@@ -1,13 +1,9 @@
-import { Component } from "react";
+import React from 'react'
 
-//Hello Component
-class Hello extends Component{
-    render(){
-        return(
-            <div>
-                <h1>Hell {this.props.name}!</h1>
-            </div>
-        )
-    }
-} 
-export default Hello;
+const Hello = () => {
+  return (
+    <div>Hello</div>
+  )
+}
+
+export default Hello
