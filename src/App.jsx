@@ -1,29 +1,10 @@
-import { useEffect, useState } from "react";
+import React from 'react'
 
- //Component:App
- const App = () => {
-    let[count, setCount] = useState(0);
-    useEffect(() =>{
-        console.log("component is mounted")
-    });
-
-const handleIncrement = () =>{
-    setCount(count + 1)
-}
-const handleDecrement = () =>{
-    setCount(count - 1)
-}
-const handleReset = () =>{
-    setCount(0  )
-}
-
+export const App = () => {
   return (
     <div>
-        <h1>counter:{count}</h1>
-        <button onClick={handleIncrement}>increment</button>
-        <button onClick={handleDecrement}>Decrement</button>
-        <button onClick={handleReset}>Reset</button>
+        <h1>hello</h1>
     </div>
   )
- }
- export default App;
+}
+export default App;
