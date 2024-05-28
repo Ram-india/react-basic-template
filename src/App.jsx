@@ -7,7 +7,8 @@ class App extends Component {
     render(){
         //return jsk
         return(
-            <Hello/>
+            <Hello
+            name = "Ram"/>
         )
 
     }
