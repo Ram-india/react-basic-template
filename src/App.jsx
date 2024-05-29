@@ -68,9 +68,9 @@ import Pricecard from "./components/Pricecard";
 
     return (
     <div>
-      <section class="pricing py-5">
-        <div class="container">
-           <div class="row">
+      <section className="pricing py-5">
+        <div className="container">
+           <div className="row">
               {
                 PricecardData.map((index,data) =>{
                   return <Pricecard key = {index}  data = {data}/>
@@ -80,6 +80,6 @@ import Pricecard from "./components/Pricecard";
          </div>
       </section>
     </div>
-    )
+    );
 }
 export default App;
