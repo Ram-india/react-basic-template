@@ -1,32 +1,44 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Register from "./pages/Register";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
 
-const router = createBrowserRouter ([
-   { path: "/",
-    element: <h1>Hello!</h1>
-    },
-    {
-        path:"/about",
-        element: <h1>about</h1>
-    },
-    {
-        path:"/products",
-        element:<h1>Products</h1>
-    },
-    {
-        path:"/services",
-        element:<h1>Services</h1>
-    },
-    {
-        path:"/contact",
-        element:<h1>Contact us</h1>
-    }
-])
+// create a router
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home/>,
+    children:[
+        {
+            path:"/",
+            element:<div><a href="/register">Register</a>
+            &nbsp;|&nbsp;<a href="/login">Login</a></div>,
+        },
+        {
+            path:"register",
+            element:<Register/>
+        },
+        {
+            path:"login",
+            element:<Login/>
+        }
+    ]
+
+  },
+  
+]);
+
 
 const App = () => {
-    //warp the app with the router
-  return (<RouterProvider router={router}/>
-
-  )
+  // wrap the app with the RouterProvider
+  return <RouterProvider router={router} />;
 }
-
 export default App;
+
+/*
+  Exercise: 
+
+  1. Create a new route for the path "/contact" with the element <h1>Contact Us</h1>
+  2. Create a new route for the path "/services" with the element <h1>Our Services</h1>
+  3. Create a new route for the path "/products" with the element <h1>Our Products</h1>
+*/
