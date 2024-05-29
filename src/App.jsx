@@ -1,5 +1,8 @@
+ import Nav from "./components/Nav";
  //Component:App
  const App = () => {
-  return <h1>Sri Angalamman</h1>
+  return <>
+<Nav/>
+  </>
  }
  export default App;
