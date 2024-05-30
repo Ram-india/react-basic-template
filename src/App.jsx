@@ -1,5 +1,5 @@
 import './App.css';
-
+import '@fortawesome/react-fontawesome';
  //Component:App
  const App = () => {
   return(
