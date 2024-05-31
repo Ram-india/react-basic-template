@@ -1,11 +1,18 @@
-import { createContext,useContext,useState } from "react"
+import { createContext,useContext,useEffect,useState } from "react"
 
  //1.create a context to store the name
  const NameContext = createContext();
  
  const D = () =>{
     //3.use the context in the component
-    const {name} = useContext(NameContext);
+    const {name, setName} = useContext(NameContext);
+
+    useEffect(() =>{
+        setTimeout(()=>{
+           setName('Ramkumar');
+        },5000)
+        
+         })
     return <h1>Hello,{name}!</h1>
 }
  const C = () =>{
@@ -21,7 +28,7 @@ import { createContext,useContext,useState } from "react"
     const [name, setName] = useState('Ram');
   return(
 
-    <NameContext.Provider value={{name}}>
+    <NameContext.Provider value={{name, setName}}>
         <B />
     </NameContext.Provider>
   ) 
