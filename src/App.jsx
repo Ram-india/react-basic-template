@@ -4,23 +4,18 @@ import { useRef } from "react";
  const App = () => {
     //create reffernce using useref
     const inputRef = useRef(null);
-    const inputRef1 = useRef(null);
+   
    
 
     const handleClick = () =>{
-       //console.log(inputRef.current.value   );
+       console.log(inputRef.current.value   );
        inputRef.current.focus();
-       
-      
- 
     }
-    const handleClick1 = () =>{
-        //console.log(inputRef.current.value   );
-        
-        inputRef1.current.focus();
-       
-  
-     }
+    const handleChange = () =>{
+        inputRef.current.value="Hello ";
+
+    }
+   console.log("component Rendering") 
 
   return (
     <>
@@ -29,13 +24,7 @@ import { useRef } from "react";
     
     ref={inputRef}/>
     <button onClick={handleClick}>Focus input</button>
-    <br/>
-    <br/>
-    <input
-    type="text"
-  
-    ref={inputRef1}/>
-    <button onClick={handleClick1}>Focus input</button>
+   <button onClick={handleChange}>change value</button>
     </>
   )
  }
