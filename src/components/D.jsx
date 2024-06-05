@@ -1,16 +1,14 @@
-import { useContext,useEffect } from "react";
-import{NameContext} from "../App";
+
+import{ useName} from "../context/NameContext";
 
 const D = () =>{
-    //3.use the context in the component
-    const {name, setName} = useContext(NameContext);
+    
+    const {name, setName} = useName();
 
-    useEffect(() =>{
-        setTimeout(()=>{
-           setName('RK');
-        },5000);
-        
-     })
-    return <h1>Hello,{name}!</h1>
+    return(
+    <>
+    <h1>Hello, { name}!</h1>
+    <p>from D component</p>
+    </> )
 }
 export default D;

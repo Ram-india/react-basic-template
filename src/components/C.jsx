@@ -1,7 +1,14 @@
 import D from './D';
+import X from './X';
 
 const C = () =>{
-    return <D/>
+    return(
+        <div>
+            <D/>
+            <X/>
+        </div>
+
+    ) 
        
  }
  export default C;
